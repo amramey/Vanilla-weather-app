@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city name..."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li id="date"></li>
+              <li id="description">Clear sky</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <strong id="temperature"></strong>
+                <span class="units"
+                  ><a href="#" id="fahrenheit-link" class="active">°F</a> |
+                  <a href="#" id="celsius-link" class="active">°C</a></span
+                >
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>mph</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card-body p-4 border-top mb-2">
+            <div class="row text-center">
+              <div class="col-2">
+                <strong class="d-block mb-2">Monday</strong>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  class=""
+                  alt=""
+                />
+                <strong class="d-block" id="wrapper-day00">99° | 69°</strong>
+              </div>
+
+              <div class="col-2">
+                <strong class="d-block mb-2" id="wrapper-day01">Tuesday</strong>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  class=""
+                  alt=""
+                />
+                <strong class="d-block" id="wrapper-day01">93° | 58°</strong>
+              </div>
+
+              <div class="col-2">
+                <strong class="d-block mb-2" id="wrapper-day02"
+                  >Wednesday</strong
+                >
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  class=""
+                  alt=""
+                />
+                <strong class="d-block" id="wrapper-day02">106° | 69°</strong>
+              </div>
+
+              <div class="col-2">
+                <strong class="d-block mb-2" id="wrapper-day03"
+                  >Thursday</strong
+                >
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  class=""
+                  alt=""
+                />
+                <strong class="d-block" id="wrapper-day03">101° | 64°</strong>
+              </div>
+
+              <div class="col-2">
+                <strong class="d-block mb-2" id="wrapper-day04">Friday</strong>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  class=""
+                  alt=""
+                />
+                <strong class="d-block" id="wrapper-day04">102° | 65°</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small
+        ><a href="" target="_blank">Open-source code</a> by Alma Ramey</small
+      >
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
